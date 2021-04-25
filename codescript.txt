@@ -1,0 +1,18 @@
+def mindif(arr,n,m):
+
+    result= +2147483647
+
+    arr.sort()
+
+    for i in range(n-m+1):
+
+        result = int(min(result,arr[i+m-1]-arr[i]))
+
+    return result
+arr = [7980,22349,999,2799,229900,11101,9999,2195,9800,4999]
+
+n = len(arr)
+
+m = int(input())
+
+print(mindif(arr,n,m))
